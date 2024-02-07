@@ -25,4 +25,4 @@ def check_video():
         return jsonify({'result': False, 'message': 'The file is not a video'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
