@@ -25,4 +25,7 @@ def check_video():
         return jsonify({'result': False, 'message': 'The file is not a video'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    import os
+    host = '0.0.0.0'
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host=host, port=port)
